@@ -59,12 +59,14 @@ app.use((error, req, res, next) => {
   res.status(status).json({ message: message, data: data });
 });
 
+const port = process.env.PORT || 8080;
+
 mongoose
   .connect(
     'mongodb+srv://DeepaAkhil:DeepaAkhil@cluster0.rhr7t.mongodb.net/RestAPI?retryWrites=true&w=majority',{ useNewUrlParser: true,useUnifiedTopology: true } 
   )
   .then(result => {
-    const server = app.listen(8080);
+    const server = app.listen(port);
       const io = require("./socket").init(server, {
          cors: {
             origin: "http://localhost:3000",
