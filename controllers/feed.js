@@ -154,7 +154,7 @@ const clearImage = filePath => {
 };
 
 exports.getdocument= (req,res,next)=>{
-  res.write("<h1>New API </h1>")
+  res.write("<h1>My New API</h1>")
   res.write("<p>This API is for creating, updating, deleting and fetching posts</p>")
 
   res.send();
