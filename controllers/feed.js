@@ -9,7 +9,7 @@ const User = require('../models/user');
 
 exports.getPosts = (req, res, next) => {
   const currentPage = req.query.page || 1;
-  const perPage = 1;
+  const perPage = 3;
   let totalItems;
   Post.find()
     .countDocuments()
