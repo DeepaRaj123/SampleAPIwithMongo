@@ -152,3 +152,9 @@ const clearImage = filePath => {
   filePath = path.join(__dirname, '..', filePath);
   fs.unlink(filePath, err => console.log(err));
 };
+
+exports.getdocument= (req,res,next)=>{
+  res.send("This API is for creating, updating, deleting and fetching posts")
+}
+
+
